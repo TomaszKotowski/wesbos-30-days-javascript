@@ -31,7 +31,6 @@ body {
     height: 100%;
     transform: translateY(-3px);
 }
-
 .hand {
     width: 50%;
     height: 5px;
@@ -39,8 +38,8 @@ body {
     position: absolute;
     top: 50%;
     transform-origin: 100%;
-    transition: all 0.03s;
-    transform: rotate(-270deg);
+    transition: all 0.5s;
+    transform: rotate(90deg);
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
@@ -55,4 +54,7 @@ body {
     width: 30%;
     background: blue;
     left: 20%
+}
+.notransition{
+    transition: none;
 }
