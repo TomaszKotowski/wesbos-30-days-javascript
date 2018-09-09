@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Yatra+One');
+
+* {
+  font-family: 'Yatra One', cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #3b3a3a;
+  font-weight: bold;
+  text-shadow: 0 0 5px gray;
+}
+
+kbd {
+  display: block;
+  font-size: 30px;
+}
+
+.exercise {
+  /* display: inline-block; */
+  /* background-image: url('pexels-photo-258668.jpeg'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.key {
+  display: inline-block;
+  border: 4px solid black;
+  border-radius: 5px;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s;
+  width: 100px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 5px black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: gainsboro;
+  box-shadow: 0 0 10px gainsboro;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffc600;
+}
