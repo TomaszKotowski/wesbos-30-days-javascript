@@ -1,7 +1,6 @@
-import { appendNavigation } from '../../index.js';
 const title = `Playing with CSS Variables and JS`;
-appendNavigation(title);
 document.title = title;
+document.querySelector('.navigation__title').innerHTML = title;
 
 /**
  * Exercise JS

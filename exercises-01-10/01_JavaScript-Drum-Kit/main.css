@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Yatra+One');
+@import '../../navigation.css';
 
 * {
   font-family: 'Yatra One', cursive;
@@ -21,19 +22,6 @@ h1 {
 kbd {
   display: block;
   font-size: 30px;
-}
-
-.exercise {
-  /* display: inline-block; */
-  /* background-image: url('pexels-photo-258668.jpeg'); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
 }
 
 .key {

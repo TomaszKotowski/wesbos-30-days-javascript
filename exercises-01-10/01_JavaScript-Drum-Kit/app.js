@@ -1,5 +1,6 @@
-import { appendNavigation } from '../../index';
-appendNavigation('JavaScript Drum Kit');
+const title = `JavaScript Drum Kit`;
+document.title = title;
+document.querySelector('.navigation__title').innerHTML = title;
 
 function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Yatra+One');
+@import '../../navigation.css';
 
 * {
   font-family: 'Yatra One', cursive;

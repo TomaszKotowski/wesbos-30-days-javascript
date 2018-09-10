@@ -1,0 +1,22 @@
+.navigation {
+  display: flex;
+  background-color: yellow;
+  align-items: center;
+}
+.navigation__home {
+  height: 100%;
+  padding: 10px;
+  background: yellow;
+  font-size: 16px;
+  text-decoration: none;
+  color: dodgerblue;
+}
+.navigation__home:hover{
+  font-weight: bold;
+}
+.navigation__title {
+  color: dodgerblue;
+  font-size: 16px;
+  margin:0 auto;
+  transform: translateX(-44px)
+}

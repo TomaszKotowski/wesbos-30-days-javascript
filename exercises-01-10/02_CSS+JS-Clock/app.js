@@ -1,5 +1,6 @@
-import { appendNavigation } from '../../index.js';
-appendNavigation(`CSS+JS Clock`);
+const title = `CSS+JS Clock`;
+document.title = title;
+document.querySelector('.navigation__title').innerHTML = title;
 
 const secondHand = document.querySelector('.second-hand');
 const minsHand = document.querySelector('.minute-hand');

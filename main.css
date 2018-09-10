@@ -19,6 +19,13 @@ body {
   color: white;;
   font-style: italic;
 }
+.exercises{
+  display: flex;
+  justify-content: space-around;
+}
+.exercises-partial{
+  text-align: left;
+}
 .exercise {
   margin: 0.5rem auto;
 }
