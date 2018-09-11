@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Yatra+One');
+@import '../navigation.css';
+
+* {
+  font-family: 'Yatra One', cursive;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+.exercise {
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>01_JavaScript-Drum-Kit</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav class="navigation">
+    <a href="../index.html" class="navigation__home">Home</a>
+    <span class="navigation__title">exercise-tile</span>
+  </nav>
+  <div class="exercise">
+    <h1>Drum Kit</h1>
+    <div data-key="81" class=key>
+      <kbd>Q</kbd>
+      <span class=sound>Sound 1</span>
+    </div>
+    <div data-key="87" class=key>
+      <kbd>W</kbd>
+      <span class=sound>Sound 2</span>
+    </div>
+    <div data-key="69" class=key>
+      <kbd>E</kbd>
+      <span class=sound>Sound 3</span>
+    </div>
+    <div data-key="82" class=key>
+      <kbd>R</kbd>
+      <span class=sound>Sound 4</span>
+    </div>
+    <div data-key="84" class=key>
+      <kbd>T</kbd>
+      <span class=sound>Sound 5</span>
+    </div>
+    <div data-key="89" class=key>
+      <kbd>Y</kbd>
+      <span class=sound>Sound 6</span>
+    </div>
+
+    <audio data-key="81" src="./sounds/beep1.mp3"></audio>
+    <audio data-key="87" src="./sounds/beep1.mp3"></audio>
+    <audio data-key="69" src="./sounds/beep3.mp3"></audio>
+    <audio data-key="82" src="./sounds/beep11.mp3"></audio>
+    <audio data-key="84" src="./sounds/beep12.mp3"></audio>
+    <audio data-key="89" src="./sounds/beep13.mp3"></audio>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

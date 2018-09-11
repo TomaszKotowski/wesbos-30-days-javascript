@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Yatra+One');
+* {
+  font-family: 'Yatra One', cursive;
+}
+
 .navigation {
   display: flex;
   background-color: yellow;
   align-items: center;
+  border:solid 2px dodgerblue
 }
 .navigation__home {
   height: 100%;
@@ -11,12 +17,12 @@
   text-decoration: none;
   color: dodgerblue;
 }
-.navigation__home:hover{
+.navigation__home:hover {
   font-weight: bold;
 }
 .navigation__title {
   color: dodgerblue;
   font-size: 16px;
-  margin:0 auto;
-  transform: translateX(-44px)
+  margin: 0 auto;
+  transform: translateX(-44px);
 }

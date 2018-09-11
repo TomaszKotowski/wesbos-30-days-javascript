@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Playing with CSS Variables and JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav class="navigation">
+    <a href="../index.html" class="navigation__home">Home</a>
+    <span class="navigation__title">exercise-tile</span>
+  </nav>
+  <div class="exercise">
+    <h2>Update CSS Variable with <span class="hl">JS</span></h2>
+    <label for="spacing">Spacing</label>
+    <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px" class="controls">
+
+    <label for="blur">Blur: </label>
+    <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px" class="controls">
+
+    <label for="base">Base Color</label>
+    <input type="color" name="base" value="#ffc600" class="controls">
+
+    <img src="./mert-atakan-985943-unsplash.jpg" alt="">
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
