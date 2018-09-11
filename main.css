@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Yatra+One');
+@import url('./navigation.css');
 
 * {
   font-family: 'Yatra One', cursive;
@@ -38,5 +39,5 @@ body {
 .exercise-link:hover {
   cursor: pointer;
   color: yellow;
-  font-weight: bold;
+  font-style: italic;
 }
