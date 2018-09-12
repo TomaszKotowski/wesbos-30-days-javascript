@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Hold Shift to Check Multiple Checkboxes</title>
+  <link rel="stylesheet" href="../navigation.css">
 </head>
 
 <body>
   <nav class="navigation">
     <a href="../index.html" class="navigation__home">Home</a>
-    <span class="navigation__title">exercise-tile</span>
+    <span class="navigation__title">Hold Shift and Check Checkboxes</span>
   </nav>
   <style>
 
@@ -104,7 +105,30 @@
     </div>
   </div>
 
+
   <script>
+    const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+    console.log(checkboxes);
+    let lastChecked;
+
+    function handleCheck(event) {
+      console.log(this);
+      let inBetween = false;
+
+      if (event.shiftKey && this.checked) {
+        checkboxes.forEach(checkbox => {
+          if (checkbox === this || checkbox === lastChecked) {
+            inBetween = !inBetween;
+          }
+          if (inBetween) {
+            checkbox.checked = true;
+          }
+        })
+      }
+      lastChecked = this;
+    };
+
+    checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck))
 
   </script>
 </body>

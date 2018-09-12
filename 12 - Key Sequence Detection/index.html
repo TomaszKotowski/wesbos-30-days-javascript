@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Key Detection</title>
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+  <link rel="stylesheet" href="../navigation.css">
 </head>
+
 <body>
-<script>
-</script>
+  <nav class="navigation">
+    <a href="../index.html" class="navigation__home">Home</a>
+    <span class="navigation__title">Key sequence detaction (KONAMI CODE)</span>
+  </nav>
+  <script>
+    const pressed = [];
+    const secretCode = 'wesbos';
+
+    window.addEventListener('keyup', event => {
+      // console.log(event.key);
+      pressed.push(event.key);
+      pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+      pressed.join('').includes(secretCode) && console.log("you did it")
+    });
+
+  </script>
 </body>
+
 </html>
