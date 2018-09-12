@@ -1,4 +1,4 @@
-# wesbos
-WesBos 30 Javascript exercises
+# 30 days of JavaScipt
+WesBos 30 Javascript course
 
-The files index.html and main.css are basicly empty. 
+Free course that can be found on https://javascript30.com/
