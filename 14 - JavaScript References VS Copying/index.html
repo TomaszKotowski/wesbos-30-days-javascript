@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JS Reference VS Copy</title>
+  <link rel="stylesheet" href="../navigation.css">
 </head>
-<body>
 
+<body>
+  <nav class="navigation">
+    <a href="../index.html" class="navigation__home">Home</a>
+    <span class="navigation__title">JS Reference VS Copy</span>
+  </nav>
   <script>
     // start with strings, numbers and booleans
 
@@ -25,12 +31,26 @@
     // Why? It's because that is an array reference, not an array copy. They both point to the same array!
 
     // So, how do we fix this? We take a copy instead!
+    const team2 = players.slice();
+    team2[3] = 'team 2';
 
     // one way
 
     // or create a new array and concat the old one in
-
+    const team3 = [].concat(players);
+    team3[3] = 'team 3';
     // or use the new ES6 Spread
+    const team4 = [...players]
+    team4[3] = 'team 4';
+    const team5 = Array.from(players);
+    team5[3] = 'team 5';
+
+    console.log('players', players);
+    console.log('team 2 ', team2);
+    console.log('team 3 ', team3);
+    console.log('team 4 ', team4);
+    console.log('team 5 ', team5);
+    console.log('players', players);
 
     // now when we update it, the original one isn't changed
 
@@ -43,14 +63,97 @@
     };
 
     // and think we make a copy:
+    const captain = person;
+    captain.age = 99;
 
     // how do we take a copy instead?
+    Object.assign({}, person)
+
 
     // We will hopefully soon see the object ...spread
+    const captain2 = { ...person };
+    captain2.age = 70;
+    console.log(captain2)
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+    // poor mans deep copy - note recommended
+
+    const captain3 = JSON.parse(JSON.stringify(person));
+    captain3.age = 40; captain3.number = 2;
+    console.log(captain3);
+
+    const persona = {
+      name: 'Wes',
+      last: 'Bos',
+      age: 80,
+      social: {
+        twitter: '@wesbos',
+      },
+      fullname: {
+        function() {
+          return `${this.name} ${this.last}`
+        }
+      }
+    };
+
+    // function fullname will be omitted
+    const captain4 = JSON.parse(JSON.stringify(persona));
+    captain4.age = 50; captain4.number = 2;
+    console.log(captain4);
+
+    // object playground;
+
+    console.log(Object.keys(persona))
+    console.log(Object.getOwnPropertyNames(persona))
+    function forInLoop() {
+      for (const key in persona) {
+        if (persona.hasOwnProperty(key)) {
+          console.log(persona[key]);
+        }
+      }
+    }
+    forInLoop();
+    console.log(Object.entries(persona))
+
+    function shallowCopy(obj) {
+      let objCopy = {};
+
+      for (let key in obj) {
+        objCopy[key] = obj[key];
+      }
+      return objCopy;
+    }
+
+    const shallowObj = shallowCopy(persona)
+
+    // deep copy of an object using recursion;
+    function deepCopy(obj) {
+      // create empty target object
+      let clone = {};
+      // loop thought all the keys in the object
+      for (let key in obj) {
+        // check if key is not null and is an object
+        if (obj[key] !== "null" && typeof (obj[key]) === 'object') {
+          // if it is, execute the same function (recursion) on the inner object
+          clone[key] = deepCopy(obj[key]);
+        } else {
+          // if the key is not an object, assign its value to a new value in the clone object
+          clone[key] = obj[key]
+        }
+      }
+      return clone
+    }
+
+
+
+    const deepObj = deepCopy(persona);
+    persona.social.twitter = "@newWesbos"
+    console.log('deepObj', deepObj);
+    console.log('persona', persona);
 
   </script>
 
 </body>
+
 </html>

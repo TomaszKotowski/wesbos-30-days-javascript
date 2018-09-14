@@ -17,18 +17,19 @@ body {
   color: yellow;
 }
 .subtitle {
-  color: white;;
+  color: white;
   font-style: italic;
 }
-.exercises{
+.exercises {
   display: flex;
   justify-content: space-around;
+  margin: 0 5px;
 }
-.exercises-partial{
+.exercises-partial {
   text-align: left;
 }
 .exercise {
-  margin: 0.5rem auto;
+  margin: 0.5rem 0.3rem;
 }
 .exercise-link {
   font-size: 16px;
